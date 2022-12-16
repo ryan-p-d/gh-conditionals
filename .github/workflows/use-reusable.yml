@@ -1,4 +1,4 @@
-name: Website Deployment
+name: Use reusable
 on:
   push:
     branches:
@@ -66,4 +66,6 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yaml
+      with: 
+        artifact-name: dist-files
 
